@@ -1,0 +1,12 @@
+Adobe After Effects v14.0.1 Windows 64 render log for project “Stars.aep”
+
+Rendering started on 18/09/2018 at 15:01:39
+
+  18/09/2018 15:01:39: Starting composition “Comp 1”.
+
+  Output To: F:\Programacao\Unity Projects\Asteroid\Comp 1\Comp 1_[#####].psd    18/09/2018 15:01:39: Finished composition “Comp 1”.
+
+
+  Total Time Elapsed: 0 Seconds
+Log closed on 18/09/2018 at 15:01:39
+

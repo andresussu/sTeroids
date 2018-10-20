@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1697798092276406}
+  m_IsPrefabAsset: 1
+--- !u!1 &1697798092276406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4147100518753724}
+  - component: {fileID: 114177143728517936}
+  - component: {fileID: 114435139808079586}
+  - component: {fileID: 114360378034027518}
+  - component: {fileID: 114503985738165332}
+  - component: {fileID: 114831197844692290}
+  - component: {fileID: 114713480605142676}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4147100518753724
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697798092276406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114177143728517936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697798092276406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c007beed01c6ed4fbffd3094181bcc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverUi: {fileID: 0}
+  tutorialUi: {fileID: 0}
+  playerControlButtons: {fileID: 0}
+  playerControlButtonsToogle: 1
+  difficulty: 1
+  levelToLoad: MainMenu
+  sceneFader: {fileID: 0}
+  debugController: {fileID: 114713480605142676}
+--- !u!114 &114360378034027518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697798092276406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08dd9a13e3945014ea8b06ea71f62b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
+  scoreText: {fileID: 0}
+  sceneFader: {fileID: 0}
+--- !u!114 &114435139808079586
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697798092276406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd9a32b2a17a1a5408724bd0be020f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefab: {fileID: 1693711787746848, guid: f358177d347365745bdc58a224468473,
+    type: 2}
+  startCounter: 5
+  spawnBar: {fileID: 0}
+  player: {fileID: 0}
+  gameController: {fileID: 114177143728517936}
+  debugController: {fileID: 114713480605142676}
+  asteroidTag: Asteroid
+  playerSpawnThreshold: 1
+  asteroidSpawnThreshold: 1
+  marker: {fileID: 1381207587601690, guid: 5881cdbb1db7a1d428efbd681cc07ecb, type: 2}
+--- !u!114 &114503985738165332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697798092276406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f636df15db26940a28e15d2e8f1c2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
+  scoreText: {fileID: 0}
+  sceneFader: {fileID: 0}
+  isPaused: 0
+--- !u!114 &114713480605142676
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697798092276406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ba3d90450e4b84b91fafa85c8a0087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 0}
+  player: {fileID: 0}
+  invincibility: 0
+  isPaused: 0
+  isDebugging: 0
+--- !u!114 &114831197844692290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697798092276406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16804bf9b55484c4ba4a624bf2249642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScore: {fileID: 0}
+  ui: {fileID: 0}
+  gameController: {fileID: 0}
+  lastActiveMenu: {fileID: 0}
+  currentScore: 0
+  highScores: 0000000000000000000000000000000000000000
+  playerNames:
+  - aaa
+  - bbb
+  - ccc
+  - ddd
+  - eee
