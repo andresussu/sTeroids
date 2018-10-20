@@ -40,7 +40,7 @@ public class SpawnerShootingStar : MonoBehaviour
 
 		Quaternion rotation = Quaternion.Euler(0, 0, Random.Range(0, 360));
 
-		GameObject newObject = Instantiate(shootingStarPrefab, position, rotation) as GameObject;
+		Instantiate(shootingStarPrefab, position, rotation);
 	}
 
 }

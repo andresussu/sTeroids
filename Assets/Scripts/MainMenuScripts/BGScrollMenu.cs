@@ -8,6 +8,8 @@ public class BGScrollMenu : MonoBehaviour
 	public Material bgStars02;
 	public Material bgStars03;
 
+	public GameObject bgDust;
+
 	float paralax = 5f;
 
 	private Vector2 startOffset01;
@@ -46,10 +48,12 @@ public class BGScrollMenu : MonoBehaviour
 		{
 
 			bgStars.transform.localScale = new Vector3(cam.orthographicSize, cam.orthographicSize, 1f);
+			bgDust.transform.localScale = new Vector3(cam.orthographicSize, cam.orthographicSize, 1f);
 		}
 		else
 		{
 			bgStars.transform.localScale = new Vector3(cam.orthographicSize * cam.aspect, cam.orthographicSize * cam.aspect, 1f);
+			bgDust.transform.localScale = new Vector3(cam.orthographicSize * cam.aspect, cam.orthographicSize * cam.aspect, 1f);
 		}
 
 	}
