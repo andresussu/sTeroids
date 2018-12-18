@@ -18,7 +18,7 @@ public class BGScroll : MonoBehaviour
 
 	private Camera cam;
 
-	public PauseMenu pauseMenu;
+	public MenuPause pauseMenu;
 
 	private void Start()
 	{

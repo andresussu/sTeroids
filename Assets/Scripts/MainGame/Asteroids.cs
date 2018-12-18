@@ -24,10 +24,10 @@ public class Asteroids : MonoBehaviour
 
 	public GameObject player;
 
+	public GameObject spawner;
+
+
 	private Camera cam;
-
-	private float maxSpawnDistance = 0.1f;
-
 
 	public float angularVelocity;
 	public float angularVelocityThreshold = 100f;
@@ -115,13 +115,16 @@ public class Asteroids : MonoBehaviour
 	{
 		Player p = player.GetComponent<Player>();
 
+		Spawner s = spawner.GetComponent<Spawner>();
+
 		AudioController audioC = audioController.GetComponent<AudioController>();
 
 		if (health == 2)
 		{
 			Player.Score += worth;
 			Vector2 position = transform.position;
-			Spawn(position, 1);
+			
+			s.SpawnOnDeath(position);
 
 			p.ScoreReward();
 			audioC.PlayAudio("Big asteroid death sound");
@@ -144,6 +147,7 @@ public class Asteroids : MonoBehaviour
 		
 	}
 
+	/*
 	public void Spawn(Vector2 _position, int _health)
 	{
 		Vector2 position01 = new Vector2(_position.x + (_position.x * Random.Range(-maxSpawnDistance, maxSpawnDistance)), _position.y + (_position.y * Random.Range(-maxSpawnDistance, maxSpawnDistance)));
@@ -160,5 +164,5 @@ public class Asteroids : MonoBehaviour
 
 		newObject02.GetComponent<Asteroids>().health = _health;
 	}
-
+	*/
 }

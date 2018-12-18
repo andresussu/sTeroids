@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818e716ccbfd8b94890a8dc81f52c2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: MainScene
+  levelToLoad: GameScene
   sceneFader: {fileID: 380162901}
 --- !u!114 &88749763
 MonoBehaviour:
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc68345927d87540823da390aabfd25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgStars: {fileID: 796614372}
+  bgStars: {fileID: 1599670575}
   bgStars01: {fileID: 2100000, guid: 0527b48a06137004f98402438d303cce, type: 2}
   bgStars02: {fileID: 2100000, guid: 160f6540d6c43fa4593d3381c19cd0a9, type: 2}
   bgStars03: {fileID: 2100000, guid: f89d6207ec1786445ab2eac7a6f343d2, type: 2}
@@ -1092,7 +1092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1647871212
 Transform:
   m_ObjectHideFlags: 0

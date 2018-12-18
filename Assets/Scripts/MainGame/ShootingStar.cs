@@ -6,7 +6,6 @@ public class ShootingStar : MonoBehaviour
 	public Rigidbody2D shootingStarRB;
 
 	public TrailRenderer trailRenderer;
-	public Material trailMaterial;
 
 	public float minSpeed;
 	public float maxSpeed;
@@ -17,7 +16,6 @@ public class ShootingStar : MonoBehaviour
 	private float trailLife;
 
 	public GameObject audioController;
-	private float randonNum;
 
 	void Start()
 	{
@@ -33,16 +31,18 @@ public class ShootingStar : MonoBehaviour
 		trailRenderer.time = trailLife;
 
 		/*
-		randonNum = Random.Range(20, 128);
+		Gradient color = new Gradient();
 
-		Color color = new Color();
-		color.r = Mathf.RoundToInt(randonNum);
+		color.colorKeys.SetValue()
+		color.r = Random.Range(30, 255);
 		color.g = color.r;
 		color.b = color.r;
-		color.a = 128;
-		//trailMaterial.color = color;
+		color.a = 255;
 		//trailRenderer.material.SetColor("Trail", color);
+
+		trailRenderer.colorGradient = color;
 		*/
+		
 	}
 
 	private void Update()

@@ -86,6 +86,7 @@ MonoBehaviour:
   audioController: {fileID: 1005492126124852, guid: 42f0dd76cd97f974eb2a9b157237a00e,
     type: 2}
   player: {fileID: 1511615344029756, guid: bd848113e6f085943ba3b11234c45e62, type: 2}
+  spawner: {fileID: 1697798092276406, guid: 0ffaa7823b30557478436890bcb0278e, type: 2}
   angularVelocity: 0
   angularVelocityThreshold: 100
 --- !u!212 &212756400409393452

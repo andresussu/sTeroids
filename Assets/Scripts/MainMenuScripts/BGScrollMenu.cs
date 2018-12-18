@@ -44,17 +44,15 @@ public class BGScrollMenu : MonoBehaviour
 
 	public void SetBGSize()
 	{
-		if(cam.scaledPixelWidth < cam.scaledPixelHeight)
+		if (cam.scaledPixelWidth < cam.scaledPixelHeight)
 		{
-
-			bgStars.transform.localScale = new Vector3(cam.orthographicSize, cam.orthographicSize, 1f);
-			bgDust.transform.localScale = new Vector3(cam.orthographicSize, cam.orthographicSize, 1f);
+			bgStars.transform.localScale = new Vector3(cam.orthographicSize * 2.01f, cam.orthographicSize * 2.01f, 1f);
+			bgDust.transform.localScale = new Vector3(cam.orthographicSize * 2.01f, cam.orthographicSize * 2.01f, 1f);
 		}
 		else
 		{
-			bgStars.transform.localScale = new Vector3(cam.orthographicSize * cam.aspect, cam.orthographicSize * cam.aspect, 1f);
-			bgDust.transform.localScale = new Vector3(cam.orthographicSize * cam.aspect, cam.orthographicSize * cam.aspect, 1f);
+			bgStars.transform.localScale = new Vector3(cam.orthographicSize * cam.aspect * 2.01f, cam.orthographicSize * cam.aspect * 2.01f, 1f);
+			bgDust.transform.localScale = new Vector3(cam.orthographicSize * cam.aspect * 2.01f, cam.orthographicSize * cam.aspect * 2.01f, 1f);
 		}
-
 	}
 }

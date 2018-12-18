@@ -39,8 +39,8 @@ public class Player : MonoBehaviour
 
 	private bool canMove = true;
 
-	private bool isFiring = false;
-	private bool isMissiling = false;
+	private bool isFire = false;
+	private bool isMissil = false;
 
 	public bool isBoosting = false;
 	private int rotation = 0;
@@ -136,7 +136,7 @@ public class Player : MonoBehaviour
 		{
 			BulletStandard();
 		}
-
+		
 		if (Input.GetKeyUp(KeyCode.LeftShift))
 		{
 			BulletMissile();
@@ -145,8 +145,8 @@ public class Player : MonoBehaviour
 		{
 			BulletMissile();
 		}
-
-		if (isFiring && fireCountdown == 0)
+		
+		if (isFire && fireCountdown == 0)
 		{
 			fireCountdown = 1f / fireRate;
 
@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
 			Destroy(audioFire, 2f);
 		}
 
-		if (isMissiling && fireCountdown == 0 && Missiles > 0)
+		if (isMissil && fireCountdown == 0 && Missiles > 0)
 		{
 			fireCountdown = 1f / fireRate;
 
@@ -212,12 +212,12 @@ public class Player : MonoBehaviour
 	
 	public void BulletStandard()
 	{
-		isFiring = !isFiring;
+		isFire = !isFire;
 	}
 
 	public void BulletMissile()
 	{
-		isMissiling = !isMissiling;
+		isMissil = !isMissil;
 	}
 
 

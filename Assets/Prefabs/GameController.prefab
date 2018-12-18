@@ -59,7 +59,7 @@ MonoBehaviour:
   gameOverUi: {fileID: 0}
   tutorialUi: {fileID: 0}
   playerControlButtons: {fileID: 0}
-  playerControlButtonsToogle: 1
+  playerControlButtonsToogle: 0
   difficulty: 1
   levelToLoad: MainMenu
   sceneFader: {fileID: 0}
@@ -97,6 +97,8 @@ MonoBehaviour:
   gameController: {fileID: 114177143728517936}
   debugController: {fileID: 114713480605142676}
   asteroidTag: Asteroid
+  numAsteroids: 0
+  maxAsteroids: 100
   playerSpawnThreshold: 1
   asteroidSpawnThreshold: 1
   marker: {fileID: 1381207587601690, guid: 5881cdbb1db7a1d428efbd681cc07ecb, type: 2}
@@ -128,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
   player: {fileID: 0}
-  invincibility: 0
+  invincibility: 1
   isPaused: 0
   isDebugging: 0
 --- !u!114 &114831197844692290
@@ -147,7 +149,7 @@ MonoBehaviour:
   gameController: {fileID: 0}
   lastActiveMenu: {fileID: 0}
   currentScore: 0
-  highScores: 0000000000000000000000000000000000000000
+  highScores: 0a00000032000000fa0000001900000005000000
   playerNames:
   - aaa
   - bbb

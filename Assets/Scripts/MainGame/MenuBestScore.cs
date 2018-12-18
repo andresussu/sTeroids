@@ -39,7 +39,7 @@ public class MenuBestScore : MonoBehaviour
 		if (currentScore > highScores[0])
 		{
 			highScores[0] = currentScore;
-			GetScores();
+			//GetScores();
 		}
 		
 		if (GameController.GameIsOver)
@@ -63,7 +63,6 @@ public class MenuBestScore : MonoBehaviour
 		}
 
 		Toggle();
-
 	}
 
 	public void Toggle()

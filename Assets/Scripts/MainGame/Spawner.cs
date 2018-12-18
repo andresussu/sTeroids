@@ -19,9 +19,13 @@ public class Spawner : MonoBehaviour
 
 	public string asteroidTag = "Asteroid";
 
+	public int numAsteroids;
+	public int maxAsteroids = 80;
 	private bool canSpawn;
 	public float playerSpawnThreshold = 1f;
 	public float asteroidSpawnThreshold = .5f;
+
+	private float maxSpawnDistance = 0.1f;
 
 	public GameObject marker;
 
@@ -34,7 +38,9 @@ public class Spawner : MonoBehaviour
 
 	private void Update()
 	{
-		if (counter < 0)
+		CountAsteroids();
+
+		if (counter < 0 && numAsteroids < maxAsteroids)
 		{
 			Vector2 position = new Vector2(Random.Range(-cam.orthographicSize * cam.aspect, cam.orthographicSize * cam.aspect), Random.Range(-cam.orthographicSize, cam.orthographicSize));
 
@@ -69,8 +75,26 @@ public class Spawner : MonoBehaviour
 		GameObject newObject = Instantiate(_prefab, _position, rotation) as GameObject;
 
 		newObject.GetComponent<Asteroids>().health = _health;
-
 	}
+
+	
+	public void SpawnOnDeath(Vector2 _position)
+	{
+		Vector2 position01 = new Vector2(_position.x + (_position.x * Random.Range(-maxSpawnDistance, maxSpawnDistance)), _position.y + (_position.y * Random.Range(-maxSpawnDistance, maxSpawnDistance)));
+		Quaternion rotation01 = Quaternion.Euler(0, 0, Random.Range(0, 180));
+
+		GameObject newObject01 = Instantiate(asteroidPrefab, position01, rotation01) as GameObject;
+
+		newObject01.GetComponent<Asteroids>().health = 1;
+
+		Vector2 position02 = new Vector2(_position.x + (_position.x * Random.Range(-maxSpawnDistance, maxSpawnDistance)), _position.y + (_position.y * Random.Range(-maxSpawnDistance, maxSpawnDistance)));
+		Quaternion rotation02 = Quaternion.Euler(0, 0, Random.Range(180, 360));
+
+		GameObject newObject02 = Instantiate(asteroidPrefab, position02, rotation02) as GameObject;
+
+		newObject02.GetComponent<Asteroids>().health = 1;
+	}
+	
 
 	public void SpawnCheck(Vector2 _position)
 	{
@@ -121,6 +145,18 @@ public class Spawner : MonoBehaviour
 					canSpawn = true;
 				}
 			}
+		}
+	}
+
+	private void CountAsteroids()
+	{
+		numAsteroids = 0;
+
+		GameObject[] asteroids = GameObject.FindGameObjectsWithTag(asteroidTag);
+
+		foreach (GameObject asteroid in asteroids)
+		{
+			numAsteroids += 1;
 		}
 	}
 
